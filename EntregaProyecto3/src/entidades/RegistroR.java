@@ -4,12 +4,12 @@ public class RegistroR extends RegistroP {
 
     private String ciudad;
     private String pais;
-    private double NumVivienda;
+    private int NumVivienda;
 
     public RegistroR() {
     }
 
-    public RegistroR(String ciudad, String pais, double NumVivienda, int numPaquete, int dia, int mes, int ano, String nombre, String CalleYCarrera, String telefono) {
+    public RegistroR(String ciudad, String pais, int NumVivienda, int numPaquete, int dia, int mes, int ano, String nombre, String CalleYCarrera, String telefono) {
         super(numPaquete, dia, mes, ano, nombre, CalleYCarrera, telefono);
         this.ciudad = ciudad;
         this.pais = pais;
@@ -54,7 +54,7 @@ public class RegistroR extends RegistroP {
     /**
      * @param NumVivienda the NumVivienda to set
      */
-    public void setNumVivienda(double NumVivienda) {
+    public void setNumVivienda(int NumVivienda) {
         this.NumVivienda = NumVivienda;
     }
 

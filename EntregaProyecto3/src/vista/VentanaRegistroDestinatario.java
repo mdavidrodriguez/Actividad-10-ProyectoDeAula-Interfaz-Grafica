@@ -166,7 +166,7 @@ public class VentanaRegistroDestinatario extends JDialog {
         r.setCalleYCarrera(this.tCalleyCarrera.getText());
         r.setTelefono(this.tTelefono.getText());
         r.setCodPostal(Integer.valueOf(this.cbCodPostal.getSelectedItem().toString()));
-        r.setNumVivienda(Double.valueOf(this.tNumVivienda.getText()));
+        r.setNumVivienda(Integer.valueOf(this.tNumVivienda.getText()));
         return r;
     }
 

@@ -74,7 +74,7 @@ public class ArchivoRemitentes {
         r.setTelefono(linea[6]);
         r.setPais(linea[7]);
         r.setCiudad(linea[8]);
-        r.setNumVivienda(Double.valueOf(linea[9]));
+        r.setNumVivienda(Integer.valueOf(linea[9]));
         return r;
 
     }

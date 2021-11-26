@@ -9,12 +9,12 @@ public class RegistroPaquetes {
     private int Alto;
     private String volumen;
     private String TRepartidor;
-    private double CodPostal;
+    private int CodPostal;
 
     public RegistroPaquetes() {
     }
 
-    public RegistroPaquetes(String TipoPaquete, int pesop, int Largo, int Ancho, int Alto, String volumen, String TRepartidor, double CodPostal) {
+    public RegistroPaquetes(String TipoPaquete, int pesop, int Largo, int Ancho, int Alto, String volumen, String TRepartidor, int CodPostal) {
         this.TipoPaquete = TipoPaquete;
         this.pesop = pesop;
         this.Largo = Largo;
@@ -85,7 +85,7 @@ public class RegistroPaquetes {
         return CodPostal;
     }
 
-    public void setCodPostal(double CodPostal) {
+    public void setCodPostal(int CodPostal) {
         this.CodPostal = CodPostal;
     }
 

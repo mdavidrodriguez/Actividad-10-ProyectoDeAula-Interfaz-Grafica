@@ -160,7 +160,7 @@ public class VentanaRegistroRemitente extends JDialog {
         r.setTelefono(this.tTelefono.getText());
         r.setPais(this.tPais.getText());
         r.setCiudad(this.tCiudad.getText());
-        r.setNumVivienda(Double.valueOf(this.tNumVivienda.getText()));
+        r.setNumVivienda(Integer.valueOf(this.tNumVivienda.getText()));
         return r;
     }
 

@@ -76,7 +76,7 @@ public class ArchivoTPaquetes {
         tp.setAlto(Integer.valueOf(linea[4]));
         tp.setVolumen(linea[5]);
         tp.setTRepartidor(linea[6]);
-        tp.setCodPostal(Double.valueOf(linea[7]));
+        tp.setCodPostal(Integer.valueOf(linea[7]));
         return tp;
 
     }

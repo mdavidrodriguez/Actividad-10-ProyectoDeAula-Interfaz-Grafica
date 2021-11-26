@@ -3,12 +3,12 @@ package entidades;
 public class RegistroD extends RegistroP {
 
     private int CodPostal;
-    private double NumVivienda;
+    private int NumVivienda;
 
     public RegistroD() {
     }
 
-    public RegistroD(int CodPostal, double NumVivienda, int numPaquete, int dia, int mes, int ano, String nombre, String CalleYCarrera, String telefono) {
+    public RegistroD(int CodPostal, int NumVivienda, int numPaquete, int dia, int mes, int ano, String nombre, String CalleYCarrera, String telefono) {
         super(numPaquete, dia, mes, ano, nombre, CalleYCarrera, telefono);
         this.CodPostal = CodPostal;
         this.NumVivienda = NumVivienda;
@@ -38,7 +38,7 @@ public class RegistroD extends RegistroP {
     /**
      * @param NumVivienda the NumVivienda to set
      */
-    public void setNumVivienda(double NumVivienda) {
+    public void setNumVivienda(int NumVivienda) {
         this.NumVivienda = NumVivienda;
     }
 

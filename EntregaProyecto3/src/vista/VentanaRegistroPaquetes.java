@@ -147,7 +147,7 @@ public class VentanaRegistroPaquetes extends JDialog {
         t.setAncho(Integer.valueOf(this.tAlto.getText()));
         t.setVolumen(this.tVolumen.getText());
         t.setTRepartidor(this.cbRepartidor.getSelectedItem().toString());
-        t.setCodPostal(Double.valueOf(this.cbCodPostal.getSelectedItem().toString()));
+        t.setCodPostal(Integer.valueOf(this.cbCodPostal.getSelectedItem().toString()));
      
         return t;
     }

@@ -58,7 +58,7 @@ public class ArchivoDestinatarios {
         rd.setCalleYCarrera(linea[5]);
         rd.setTelefono(linea[6]);
         rd.setCodPostal(Integer.valueOf(linea[7]));
-        rd.setNumVivienda(Double.valueOf(linea[8]));
+        rd.setNumVivienda(Integer.valueOf(linea[8]));
         return rd;
 
     }
