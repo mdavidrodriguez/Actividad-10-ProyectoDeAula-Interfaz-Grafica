@@ -15,7 +15,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public VentanaPrincipal() {
 
         this.initComponentes();
-        this.setTitle("Aplicacion Trasportadora - Dileby Upar - Ventana Principal");
+        this.setTitle("Aplicacion Trasportadora - Delivery – Upar - Ventana Principal");
         //this.setSize(300, 600);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);

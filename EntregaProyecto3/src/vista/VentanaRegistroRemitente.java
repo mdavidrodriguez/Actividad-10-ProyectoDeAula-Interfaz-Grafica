@@ -20,7 +20,7 @@ public class VentanaRegistroRemitente extends JDialog {
     private JTextField tNombre, tCalleyCarrera, tTelefono, tPais, tCiudad, tNumVivienda, tAno;
     private JFormattedTextField ftNumpaquete;
     private JSpinner jsDia, jsMes;
-    private JButton bGuardar, bBuscar, bELiminar, bCancelar;
+    private JButton bGuardar, bELiminar;
     private final RegistroRemitentes modelo;
     private String nombre;
 
@@ -28,9 +28,9 @@ public class VentanaRegistroRemitente extends JDialog {
         super(owner, modal);
         this.modelo = new RegistroRemitentes();
         this.initComponentes();
-        this.setTitle("Registro de Goleadores - Futbol Profesional Colombiano - Ventana de registro");
+        this.setTitle("Registro De Remitentes - Delivery – Upar - Ventana de registro");
         //this.pack();
-        this.setSize(600, 300);
+        this.setSize(600, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         this.setVisible(true);
@@ -122,16 +122,12 @@ public class VentanaRegistroRemitente extends JDialog {
         panel.setLayout(new GridLayout(4, 1, 5, 5));
 
         this.bGuardar = new JButton("Guardar");
-        this.bCancelar = new JButton("Cancelar");
         this.bELiminar = new JButton("Eliminar");
 
         panel.add(this.bGuardar);
         this.bGuardar.addActionListener(new clickBotonGuardar());
         panel.add(this.bELiminar);
         this.bELiminar.addActionListener(new clickBotonEliminar());
-        panel.add(this.bCancelar);
-        this.bCancelar.addActionListener(new clickBotonCancelar());
-
         this.panelBotones = new JPanel();
         this.panelBotones.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         this.panelBotones.setLayout(new FlowLayout());
@@ -221,13 +217,8 @@ public class VentanaRegistroRemitente extends JDialog {
 
     }
 
-    class clickBotonCancelar implements ActionListener {
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-        }
 
     }
 
-}
+

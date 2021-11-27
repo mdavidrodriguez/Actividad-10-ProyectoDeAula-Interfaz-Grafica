@@ -18,8 +18,8 @@ public class VentanaRegistroPaquetes extends JDialog {
     private JPanel panelDatos, panelBotones;
     private JLabel lTipoPaquete, lPeso, lLargo, lAncho, lAlto, lVolumen, lRepartidor, lCodPostal;
     private JTextField tPeso, tLargo, tAncho, tAlto, tVolumen;
-    private JButton bGuardar, bELiminar, bCancelar;
-    private JComboBox cbTipoPaquete,cbCodPostal, cbRepartidor;
+    private JButton bGuardar, bELiminar;
+    private JComboBox cbTipoPaquete, cbCodPostal, cbRepartidor;
     private final RegistrodePaquetes modelo;
 
     public VentanaRegistroPaquetes(JFrame owner, boolean modal) {
@@ -28,7 +28,7 @@ public class VentanaRegistroPaquetes extends JDialog {
         this.initComponentes();
         this.setTitle("Registro de Paquetes - Delybe Upar - Ventana de registro");
         //this.pack();
-        this.setSize(600, 300);
+        this.setSize(600, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         this.setVisible(true);
@@ -62,7 +62,7 @@ public class VentanaRegistroPaquetes extends JDialog {
         this.cbTipoPaquete.addItem("Caja");
         this.cbTipoPaquete.addItem("Sobre");
         this.cbTipoPaquete.addItem("Otro");
-        
+
         this.tPeso = new JTextField(null);
         this.tLargo = new JTextField(null);
         this.tAncho = new JTextField(null);
@@ -94,10 +94,10 @@ public class VentanaRegistroPaquetes extends JDialog {
 
         this.panelDatos.add(this.lLargo);
         this.panelDatos.add(this.tLargo);
-        
+
         this.panelDatos.add(this.lAncho);
         this.panelDatos.add(this.tAncho);
-        
+
         this.panelDatos.add(this.lAlto);
         this.panelDatos.add(this.tAlto);
 
@@ -106,7 +106,7 @@ public class VentanaRegistroPaquetes extends JDialog {
 
         this.panelDatos.add(this.lRepartidor);
         this.panelDatos.add(this.cbRepartidor);
-        
+
         this.panelDatos.add(this.lCodPostal);
         this.panelDatos.add(this.cbCodPostal);
 
@@ -120,15 +120,12 @@ public class VentanaRegistroPaquetes extends JDialog {
         panel.setLayout(new GridLayout(4, 1, 5, 5));
 
         this.bGuardar = new JButton("Guardar");
-        this.bCancelar = new JButton("Cancelar");
         this.bELiminar = new JButton("Eliminar");
 
         panel.add(this.bGuardar);
         this.bGuardar.addActionListener(new clickBotonGuardar());
         panel.add(this.bELiminar);
         this.bELiminar.addActionListener(new clickBotonEliminar());
-        panel.add(this.bCancelar);
-        this.bCancelar.addActionListener(new clickBotonCancelar());
 
         this.panelBotones = new JPanel();
         this.panelBotones.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -152,7 +149,7 @@ public class VentanaRegistroPaquetes extends JDialog {
         t.setVolumen(this.tVolumen.getText());
         t.setTRepartidor(this.cbRepartidor.getSelectedItem().toString());
         t.setCodPostal(Integer.valueOf(this.cbCodPostal.getSelectedItem().toString()));
-     
+
         return t;
     }
 
@@ -173,7 +170,6 @@ public class VentanaRegistroPaquetes extends JDialog {
 
     }
 
-
     class clickBotonGuardar implements ActionListener {
 
         @Override
@@ -184,7 +180,6 @@ public class VentanaRegistroPaquetes extends JDialog {
     }
 
     public void eliminar() {
- 
 
     }
 
@@ -198,12 +193,4 @@ public class VentanaRegistroPaquetes extends JDialog {
 
     }
 
-    class clickBotonCancelar implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-        }
-
-    }
 }
