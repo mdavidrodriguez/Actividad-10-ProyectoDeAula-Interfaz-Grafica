@@ -17,9 +17,9 @@ public class VentanaRegistroPaquetes extends JDialog {
     private Container contenedor;
     private JPanel panelDatos, panelBotones;
     private JLabel lTipoPaquete, lPeso, lLargo, lAncho, lAlto, lVolumen, lRepartidor, lCodPostal;
-    private JTextField tTipoPaquete, tPeso, tLargo, tAncho, tAlto, tVolumen;
+    private JTextField tPeso, tLargo, tAncho, tAlto, tVolumen;
     private JButton bGuardar, bELiminar, bCancelar;
-    private JComboBox cbCodPostal, cbRepartidor;
+    private JComboBox cbTipoPaquete,cbCodPostal, cbRepartidor;
     private final RegistrodePaquetes modelo;
 
     public VentanaRegistroPaquetes(JFrame owner, boolean modal) {
@@ -58,7 +58,11 @@ public class VentanaRegistroPaquetes extends JDialog {
         this.lRepartidor = new JLabel("Tipo de repartidor: ");
         this.lCodPostal = new JLabel("Codigo Postal: ");
 
-        this.tTipoPaquete = new JTextField(null);
+        this.cbTipoPaquete = new JComboBox();
+        this.cbTipoPaquete.addItem("Caja");
+        this.cbTipoPaquete.addItem("Sobre");
+        this.cbTipoPaquete.addItem("Otro");
+        
         this.tPeso = new JTextField(null);
         this.tLargo = new JTextField(null);
         this.tAncho = new JTextField(null);
@@ -83,7 +87,7 @@ public class VentanaRegistroPaquetes extends JDialog {
         this.cbCodPostal.addItem("200018");
 
         this.panelDatos.add(this.lTipoPaquete);
-        this.panelDatos.add(this.tTipoPaquete);
+        this.panelDatos.add(this.cbTipoPaquete);
 
         this.panelDatos.add(this.lPeso);
         this.panelDatos.add(this.tPeso);
@@ -140,11 +144,11 @@ public class VentanaRegistroPaquetes extends JDialog {
 
         RegistroPaquetes t = new RegistroPaquetes();
 
-        t.setTipoPaquete(this.tTipoPaquete.getText());
+        t.setTipoPaquete(this.cbTipoPaquete.getSelectedItem().toString());
         t.setPesop(Integer.valueOf(this.tPeso.getText()));
         t.setLargo(Integer.valueOf(this.tLargo.getText()));
         t.setAncho(Integer.valueOf(this.tAncho.getText()));
-        t.setAncho(Integer.valueOf(this.tAlto.getText()));
+        t.setAlto(Integer.valueOf(this.tAlto.getText()));
         t.setVolumen(this.tVolumen.getText());
         t.setTRepartidor(this.cbRepartidor.getSelectedItem().toString());
         t.setCodPostal(Integer.valueOf(this.cbCodPostal.getSelectedItem().toString()));

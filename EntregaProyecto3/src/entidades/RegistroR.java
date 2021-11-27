@@ -47,7 +47,7 @@ public class RegistroR extends RegistroP {
     /**
      * @return the NumVivienda
      */
-    public double getNumVivienda() {
+    public int getNumVivienda() {
         return NumVivienda;
     }
 

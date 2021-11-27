@@ -81,7 +81,7 @@ public class RegistroPaquetes {
         this.TRepartidor = TRepartidor;
     }
 
-    public double getCodPostal() {
+    public int getCodPostal() {
         return CodPostal;
     }
 

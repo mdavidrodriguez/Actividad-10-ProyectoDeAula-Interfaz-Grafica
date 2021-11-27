@@ -10,7 +10,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
     private JMenuBar barraMenu;
     private JMenu menu;
-    private JMenuItem itemMenuRegistro, itemMenuRegistroD, itemMenuConsulta,itemMenuRegistroPaquetes;
+    private JMenuItem itemMenuRegistro, itemMenuRegistroD, itemMenuConsulta,itemMenuRegistroPaquetes,itemMenuConsultaD, itemMenuConsultaP;
 
     public VentanaPrincipal() {
 
@@ -39,14 +39,22 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         this.itemMenuConsulta = new JMenuItem("Consulta");
         this.itemMenuConsulta.addActionListener(this);
         this.menu.add(itemMenuConsulta);
-
+        
         this.itemMenuRegistroD = new JMenuItem("Registro Destinatario");
         this.itemMenuRegistroD.addActionListener(this);
         this.menu.add(itemMenuRegistroD);
         
+        this.itemMenuConsultaD = new JMenuItem("Consulta Destinatario");
+        this.itemMenuConsultaD.addActionListener(this);
+        this.menu.add(itemMenuConsultaD);
+        
         this.itemMenuRegistroPaquetes = new JMenuItem("Registro Paquetes");
         this.itemMenuRegistroPaquetes.addActionListener(this);
         this.menu.add(itemMenuRegistroPaquetes);
+        
+        this.itemMenuConsultaP = new JMenuItem("Consulta Paquetes Registrados");
+        this.itemMenuConsultaP.addActionListener(this);
+        this.menu.add(itemMenuConsultaP);
         
 
     }
@@ -61,11 +69,20 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         } else if (e.getSource() == this.itemMenuConsulta) {
 
             VentanaConsulta consulta = new VentanaConsulta(this, true);
+            
         } else if (e.getSource() == this.itemMenuRegistroD) {
             VentanaRegistroDestinatario registro = new VentanaRegistroDestinatario(this, true);
+            
+         } else if (e.getSource() == this.itemMenuConsultaD) {
+            VentanaConsultaDestinatario consulta = new VentanaConsultaDestinatario(this, true);
         }
         else if (e.getSource() == this.itemMenuRegistroPaquetes) {
             VentanaRegistroPaquetes registro = new VentanaRegistroPaquetes(this, true);
+        }   
+            else if(e.getSource() == this.itemMenuConsultaP) {
+            VentanaConsultaPaquetes consulta = new VentanaConsultaPaquetes(this, true);
+            
+            
 
     }
 

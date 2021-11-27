@@ -1,9 +1,14 @@
-sobre;12;10;23;12;83;las;2018.0
-caja;56;14;76;24;132;categoria b;201008.0
-Caja;3;10;12;15;100;Categoria B;201923.0
-Caja;34;12;10;20;300;Categoria B;20394.0
-caja;20;12;10;21;230;b;76.0
-caja;20;34;12;34;23;categoria b;201008.0
-caja;12;10;13;0;200;Categoria A;200001.0
-caja;12;14;12;0;200;Categoria A;200001
-caja;10;11;4;0;100;Categoria B;200008
+sobre;12;10;23;12;83;las;2018
+caja;56;14;76;24;132;categoria b;201008
+Caja;3;10;12;15;100;Categoria B;201923
+Caja;34;12;10;20;300;Categoria B;20394
+caja;20;12;10;21;230;b;76
+caja;20;34;12;34;23;categoria b;201008
+caja;12;10;13;40;200;Categoria A;200001
+caja;12;14;12;23;200;Categoria A;200001
+caja;10;11;4;16;100;Categoria B;200008
+caja;12;12;15;56;200;Categoria C;200009
+Caja;10;5;4;21;200;Categoria A;200001
+Sobre;15;5;3;25;200;Categoria A;200001
+Otro;19;2;7;28;150;Categoria A;200001
+Otro;12;8;14;16;400;Categoria C;200005
